@@ -94,7 +94,7 @@ export class Schema<SchemaType> {
 		// Helper function to check JS types
 		const checkType = (type: string, value: any) => {
 			if (type === 'string') {
-				return typeof value === 'string'
+				return typeof value === 'string' || value === null
 			} else if (type === 'number') {
 				return typeof value === 'number'
 			} else if (type === 'boolean') {
